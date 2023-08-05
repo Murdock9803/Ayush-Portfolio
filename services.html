@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayush-Portfolio</title>
+    <link rel="icon" href="AyushSahuLogocropped.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="" href="https://www.flaticon.com/free-stickers/browser" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-family: 'poppins', sans-serif;
+        }
+
+        nav {
+            position: fixed;
+            z-index: 1;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 9vh;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 20px;
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+        }
+
+        .left img {
+            height: 50px;
+        }
+
+        .logo-line {
+            width: 2px;
+            height: 30px;
+            margin: 0 20px;
+            background-color: rgb(177, 171, 231);
+        }
+
+        .left a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 1.4rem;
+        }
+
+        .left a:hover {
+            color: #9d9fff;
+        }
+
+        .right ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .right ul li a:hover {
+            color: #9d9fff;
+            font-weight: bolder;
+        }
+
+        .page {
+            color: #dfa0a0;
+            padding: 20vh 5vw 10vh;
+            height: 90vh;
+        }
+
+        .service-flex {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+
+        .service-item {
+            width: 20%;
+            box-shadow: 7px 7px rgb(50, 53, 84);
+        }
+
+        .image {
+            overflow: hidden;
+        }
+
+        .image img {
+            width: 100%;
+            height: 13vw;
+            transition: all ease 1s;
+        }
+
+        .image:hover img {
+            transform: scale(1.15);
+        }
+
+        .info {
+            color: black;
+            padding: 20px;
+            height: 180px;
+            font-size: 1.4vw;
+            position: relative;
+        }
+
+        .info p {
+            position: absolute;
+            bottom: 10px;
+        }
+
+
+
+
+        .bottom {
+            height: 30vh;
+            width: 100%;
+            background-color: #0d0d17;
+            padding: 5vh;
+            text-align: center;
+        }
+
+        .bottom-h1 {
+            font-size: 1vw;
+            color: #bcbaf2;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            padding: 10px;
+            margin: 3vh 1vw;
+            background-color: rgb(126, 127, 194);
+            border-radius: 50%;
+            height: 2.5vw;
+            width: 2.5vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 120%;
+            overflow: hidden;
+        }
+
+        .social-icons a i {
+            color: #000;
+        }
+
+        .social-icons a:hover {
+            background-color: #151520;
+            transition: 0.5s;
+        }
+
+        .social-icons a:hover i {
+            color: white;
+            transition: 0.5s;
+        }
+
+        .copyright {
+            font-size: 0.8vw;
+            color: #635a99;
+            margin-top: 3.5vh;
+        }
+
+
+
+
+
+        /* RESPONSIVENESS */
+
+        @media (max-width : 700px) {
+
+
+            .left a {
+                font-size: 3vw;
+            }
+
+            .left img {
+                height: 7vw;
+            }
+
+            nav ul li {
+                margin: 0 2vw;
+                font-size: 2vw;
+            }
+
+            .logo-line {
+                margin: 0 10px;
+                height: 25px;
+            }
+
+
+            .page {
+                height: fit-content;
+            }
+
+            .service-flex {
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .service-item {
+                width: 50%;
+                margin: 10% 24%;
+            }
+
+            .image img {
+                height: 80%;
+            }
+
+            .info {
+                height: 90px;
+                font-size: 3vw;
+            }
+
+            .info p {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="left">
+                <a target="_blank" href="https://youtu.be/dQw4w9WgXcQ"><img class="logoimg" src="website.png" alt="logo" /></a>
+                <div class="logo-line"></div>
+                <a href="index.html">Ayush's Portfolio</a>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#middle">Skills</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page">
+        <div class="service-flex">
+            <div class="service-item" style="background-color: rgb(237, 32, 61);">
+                <div class="image"><img src="webdev.jpg" alt="webdev"></div>
+                <div class="info">
+                    <tt><strong>Web Development, Software dev</strong></tt>
+                    <p>⭐⭐⭐⭐</p>
+                </div>
+            </div>
+            <div class="service-item" style="background-color: rgb(52, 164, 124);">
+                <div class="image"><img src="programmer.jpg" alt="code"></div>
+                <div class="info">
+                    <tt><strong>Programming (C++, PYTHON, JavaScript)</strong></tt>
+                    <p>⭐⭐⭐</p>
+                </div>
+            </div>
+            <div class="service-item" style="background-color: rgb(179, 45, 226);">
+                <div class="image"><img src="design.jpg" alt="Designing"></div>
+                <div class="info">
+                    <tt><strong>Design (Canva, Figma, Graphic Design)</strong></tt>
+                    <p>⭐⭐⭐⭐</p>
+                </div>
+            </div>
+            <div class="service-item" style="background-color: rgb(255, 153, 0);">
+                <div class="image"><img src="autocad.jpg" alt="building softwares"></div>
+                <div class="info">
+                    <tt><strong>AutoCAD and Staad-Pro</strong></tt>
+                    <p>⭐⭐⭐</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="bottom" id="bottom">
+        <div class="bottom-h1">
+            <h1><tt>Let's Connect across Platforms !</tt></h1>
+        </div>
+        <div class="social-icons">
+            <a target="_blank" href="mailto:ayushsahu9803@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            <a target="_blank" href="https://github.com/Murdock9803"><i class="fa-brands fa-github"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/ayush-sahu-25b329230"><i
+                    class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div class="copyright">© AYUSH SAHU 2023</div>
+    </div>
+    </section>
+
+
+</body>
+
+</html>
