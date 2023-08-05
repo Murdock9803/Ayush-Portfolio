@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'poppins',sans-serif;
+}
+
+nav {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items:center ;
+    height: 9vh;
+    width: 100%;
+    background-color: rgb(14, 14, 55);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left img {
+    height: 50px;
+}
+
+.logo-line {
+    width: 2px;
+    height: 30px;
+    margin: 0 20px;
+    background-color: rgb(177, 171, 231);
+}
+
+.left a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.left a:hover {
+    color: #9d9fff;
+}
+
+.right ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.right ul li a:hover {
+    color: #9d9fff;
+    font-weight: bolder;
+}
+
+.top {
+    height: 109vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(41, 21, 106));
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 12vh 0;
+}
+
+.top-left {
+    width: 40%;
+    font-size: 3vw;
+    padding: 0 3vw;
+}
+
+.my-image{
+    width: 14vw;
+    height: 14vw;
+    margin: 5vh 30%;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid rgb(55, 39, 97);
+}
+
+
+.my-image img {
+    width: 100%;
+    transition: all ease 1s;
+}
+
+.my-image img:hover {
+    transform: scale(1.15);
+}
+
+.intro {
+    color: rgb(255, 255, 255);
+}
+
+.name {
+    color: rgb(145, 140, 228);
+}
+
+#element {
+    color: rgb(140, 135, 220);
+}
+
+.top-right {
+    width: 40%;;
+    padding:4% 4%;
+}
+
+.top-right img {
+    width: 100%;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: #a8b3ec;
+    margin: 0 ;
+}
+
+.middle {
+    height: calc(60vh - 2px);
+    width: 100%;
+    background-image: linear-gradient(to bottom left , rgb(46, 31, 111),#000);
+    padding: 2vh 8vw;
+}
+
+.middle span {
+    color: #726c6c;
+    font-size: 1vw;
+}
+
+.middle h1 {
+    color: #bcbaf2;
+    font-size: 2vw;
+}
+
+.skill-box {
+    height: 70%;
+    width: 100%;
+    margin: 3% 0 0 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.skill-item {
+    color: #a8b3ec;
+    width: 25%;
+    height: 100%;
+    padding: 2%;
+    font-size: 1.2rem;
+}
+
+.skill-item ul {
+    width: 100%;
+}
+
+.skill-item ul li {
+    list-style: none;
+    margin: 7% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+.icondiv {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.skillName {
+    color: #a8b3ec;
+    font-size: 1.35vw;
+    width: 70%;
+    transition: ease 1s;
+    letter-spacing: 2px;
+    box-shadow: inset 0 0 0 0 #a8b3ec;
+}
+
+.skillName:hover {
+    background-color: white;
+    color: #000;
+    box-shadow: inset 400px 0 0 0 #a8b3ec;
+}
+
+.skill-item ul li i {
+    font-size: 2vw;
+    margin: auto;
+}
+
+.bottom {
+    height: 31vh;
+    width: 100%;
+    background-color: #151520;
+    padding: 5vh;
+    text-align: center;
+}
+
+.bottom-h1 {
+    font-size: 1.3vw;
+    color: #bcbaf2;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    text-decoration: none;
+    padding: 10px;
+    margin: 3vh 1vw;
+    background-color: rgb(126, 127, 194);
+    border-radius: 50%;
+    height: 2.5vw;
+    width: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 120%;
+    overflow: hidden;
+}
+
+.social-icons a i {
+    color: #000;
+}
+
+.social-icons a:hover {
+    background-color: #151520;
+    transition: 0.5s;
+}
+
+.social-icons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.copyright {
+    font-size: 0.8vw;
+    color: #635a99;
+    margin-top: 3.5vh;
+}
+
+
+
+
+/* responsiveness */
+
+@media (max-width : 700px) {
+    .left a {
+        font-size: 3vw;
+    }
+
+    .left img {
+        height: 7vw;
+    }
+
+    nav ul li {
+        margin: 0 2vw;
+        font-size: 2vw;
+    }
+
+    .logo-line {
+        margin: 0 10px;
+        height: 25px;
+    }
+
+    .top {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .top-left, .top-right {
+        width: 60%;
+    }
+
+    .top-left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .my-image {
+        height: 30vw;
+        width: 30vw;
+    }
+
+    .middle {
+        height: fit-content;
+    }
+
+    .skill-box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skill-item {
+        width: 80%;
+    }
+
+    .skillName {
+        font-size: 2.2vw;
+    }
+
+    .bottom {
+        height: fit-content;
+    }
+}
