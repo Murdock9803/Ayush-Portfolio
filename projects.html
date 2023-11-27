@@ -131,15 +131,20 @@
         .info {
             color: rgb(205, 205, 205);
             padding: 20px;
-            height: 180px;
+            height: calc(15vw + 20px);
             font-size: 1.4vw;
             position: relative;
         }
 
+        .info tt {
+            height: 2vw;
+        }
+
         .info p {
+            height: 8vw;
             position: absolute;
             bottom: 10px;
-            font-size: 14px;
+            font-size: 1vw;
         }
 
         .bottom {
@@ -242,12 +247,18 @@
             }
 
             .info {
-                height: 90px;
+                height: calc(20vw + 40px);
                 font-size: 3vw;
             }
 
+            .info tt {
+                height: 5vw;
+            }
+
             .info p {
-                display: none;
+                height: 15vw;
+                font-size: 2.1vw;
+                margin-top: 20px;
             }
         }
     </style>
