@@ -93,14 +93,15 @@
 
         .page {
             color: #dfa0a0;
-            padding: 20vh 5vw 10vh;
-            height: 90vh;
+            padding: 20vh 5vw 0vh;
+            height: fit-content;
         }
 
         .service-flex {
             display: flex;
             justify-content: space-evenly;
             width: 100%;
+            margin-bottom: 60px;
         }
 
         .service-item {
@@ -110,11 +111,14 @@
 
         .image {
             overflow: hidden;
+            background-color: #000;
+            text-align: center;
         }
 
         .image img {
             width: 100%;
             height: 13vw;
+            vertical-align: middle;
             transition: all ease 1s;
         }
 
@@ -234,6 +238,10 @@
                 margin: 10% 24%;
             }
 
+            .service-item a {
+                text-decoration: none;
+            }
+
             .image img {
                 height: 80%;
             }
@@ -266,7 +274,7 @@
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                </ul>
+                  </ul>
             </div>
         </nav>
     </header>
@@ -274,36 +282,73 @@
     <div class="page">
         <div class="service-flex">
             <div class="service-item" style="background-color: rgb(237, 32, 61);">
-                <div class="image"><img src="webdev.jpg" alt="webdev"></div>
+                <div class="image"><img src="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29kaW5nfGVufDB8fDB8fHww" alt="webdev"></div>
                 <div class="info">
-                    <tt><strong>Web Development, Software dev</strong></tt>
+                    <tt><strong>&lt; Web Dev /&gt; <br> &lt; Software Dev /&gt;</strong></tt>
                     <p>⭐⭐⭐⭐</p>
                 </div>
             </div>
+
             <div class="service-item" style="background-color: rgb(52, 164, 124);">
-                <div class="image"><img src="programmer.jpg" alt="code"></div>
+                <div class="image"><img src="https://images.unsplash.com/photo-1560457079-9a6532ccb118?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNvbXB1dGVyfGVufDB8fDB8fHww" alt="code"></div>
                 <div class="info">
-                    <tt><strong>Programming (C++, PYTHON, JavaScript)</strong></tt>
+                    <tt><strong>&lt; API Dev /&gt; <br> &lt; DevOPS /&gt;</strong></tt>
                     <p>⭐⭐⭐</p>
                 </div>
             </div>
-            <div class="service-item" style="background-color: rgb(179, 45, 226);">
-                <div class="image"><img src="design.jpg" alt="Designing"></div>
+
+            <div class="service-item" style="background-color: rgb(95, 39, 117);">
+                <div class="image"><img src="https://mdg.imgix.net/assets/images/vscode.png" alt="Designing"></div>
                 <div class="info">
-                    <tt><strong>Design (Canva, Figma, Graphic Design)</strong></tt>
+                    <tt><strong>&lt; Documentation /&gt; <br> &lt; Technical Docs /&gt;</strong></tt>
                     <p>⭐⭐⭐⭐</p>
                 </div>
             </div>
+
             <div class="service-item" style="background-color: rgb(255, 153, 0);">
-                <div class="image"><img src="autocad.jpg" alt="building softwares"></div>
+                <div class="image"><img src="https://images.unsplash.com/photo-1485083269755-a7b559a4fe5e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2l2aWwlMjBlbmdpbmVlcmluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="building softwares"></div>
                 <div class="info">
-                    <tt><strong>AutoCAD and Staad-Pro</strong></tt>
+                    <tt><strong>&lt; AutoCAD /&gt; <br> &lt; Staad-Pro /&gt;</strong></tt>
+                    <p>⭐⭐⭐</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="service-flex">
+            <div class="service-item" style="background-color: rgb(237, 32, 61);">
+                <div class="image"><img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmlnbWF8ZW58MHx8MHx8fDA%3D" alt="webdev"></div>
+                <div class="info">
+                    <tt><strong>&lt; UI-UX Design /&gt; <br> &lt; Graphic Design /&gt;</strong></tt>
+                    <p>⭐⭐⭐⭐</p>
+                </div>
+            </div>
+
+            <div class="service-item" style="background-color: rgb(52, 164, 124);">
+                <div class="image"><img src="https://i.pinimg.com/1200x/a2/be/77/a2be778cac94e9d39e705efb7f89d296.jpg" alt="code"></div>
+                <div class="info">
+                    <tt><strong>&lt; Couldn't find preferred service ?  <a style="color: #000;" href="mailto:ayushsahu9803@gmail.com">Contact Us</a>/&gt;</strong></tt>
+                    <p>⭐⭐⭐</p>
+                </div>
+            </div>
+
+            <div class="service-item" style="background-color: rgb(179, 45, 226);">
+                <div class="image"><img src="https://i.pinimg.com/1200x/a2/be/77/a2be778cac94e9d39e705efb7f89d296.jpg" alt="Designing"></div>
+                <div class="info">
+                    <tt><strong>&lt; Couldn't find preferred service ?  <a style="color: #000;" href="mailto:ayushsahu9803@gmail.com">Contact Us</a>/&gt;</strong></tt>
+                    <p>⭐⭐⭐⭐</p>
+                </div>
+            </div>
+
+            <div class="service-item" style="background-color: rgb(255, 153, 0);">
+                <div class="image"><img src="https://i.pinimg.com/1200x/a2/be/77/a2be778cac94e9d39e705efb7f89d296.jpg" alt="building softwares"></div>
+                <div class="info">
+                    <tt><strong>&lt; Couldn't find preferred service ?  <a style="color: #000;" href="mailto:ayushsahu9803@gmail.com">Contact Us</a>/&gt;</strong></tt>
                     <p>⭐⭐⭐</p>
                 </div>
             </div>
         </div>
     </div>
-
 
 
     <div class="bottom" id="bottom">
