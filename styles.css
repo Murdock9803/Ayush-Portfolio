@@ -132,6 +132,98 @@ nav ul li {
     margin: 0 ;
 }
 
+/* Experience section */
+
+.experience {
+    width: 100%;
+    background-image: linear-gradient(to bottom left , rgb(46, 31, 111),#000000);
+    padding: 2vh 8vw 10vh;
+    overflow: hidden;
+}
+
+.experience span {
+    color: #726c6c;
+    font-size: 1vw;
+}
+
+.experience h1 {
+    color: #bcbaf2;
+    font-size: 2vw;
+}
+
+.experience .left-item {
+    width: 60%;
+    height: 17vmax;
+    border: #a8b3ec 2px solid;
+    border-radius: 20px;
+    margin-top: 8vmax;
+    transition: all ease 1s;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.experience .right-item {
+    width: 60%;
+    height: 17vmax;
+    border: #a8b3ec 2px solid;
+    border-radius: 20px;
+    margin-top: 8vmax;
+    position: relative;
+    left: 32vw;
+    display: flex;
+    overflow: hidden;
+    transition: all ease 1s;
+}
+
+.experience a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.right-item:hover, .left-item:hover {
+    background-color: #050b1f;
+    box-shadow: 15px 15px 10px #a8b3ec;
+}
+
+.exp-img {
+    width: 35%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exp-img img {
+    width: 75%;
+}
+
+.exp-desc {
+    width: 65%;
+    height: 100%;
+}
+
+.exp-desc-head {
+    height: 32%;
+    padding: 2% 2%;
+}
+
+.exp-desc-body {
+    height: 68%;
+    padding: 2% 2%;
+}
+
+.exp-desc-body p {
+    font-size: 1.1vmax;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Skillset Section */
+
 .middle {
     height: calc(60vh - 2px);
     width: 100%;
@@ -219,6 +311,9 @@ nav ul li {
     font-size: 2vw;
     margin: auto;
 }
+
+
+/* Footer section */
 
 .bottom {
     height: 31vh;
