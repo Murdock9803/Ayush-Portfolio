@@ -412,6 +412,15 @@ nav ul li {
         width: 30vw;
     }
 
+    .experience .left-item {
+        width: 80vw;
+    }
+
+    .experience .right-item {
+        width: 80vw;
+        left: 0vw;
+    }
+
     .middle {
         height: fit-content;
     }
@@ -432,5 +441,46 @@ nav ul li {
 
     .bottom {
         height: fit-content;
+    }
+}
+
+
+@media (min-width: 500px) and (max-width: 700px) { 
+    .experience img {
+        width: 60%;
+    }
+}
+
+@media (max-width: 500px) {
+    .experience .left-item {
+        height: 180px;
+    }
+    .left-item h1 {
+        font-size: 13px;
+    }
+    .left-item span {
+        font-size: 5px;
+    }
+
+    .experience .right-item {
+        height: 180px;
+    }
+    .right-item h1 {
+        font-size: 13px;
+    }
+    .right-item span {
+        font-size: 5px;
+    }
+
+    .exp-desc-head {
+        height: 65px;
+    }
+    .exp-desc-body {
+        font-size: 5px;
+    }
+
+    .right-item:hover, .left-item:hover {
+        background-color: #050b1f;
+        box-shadow: 8px 8px 10px #a8b3ec;
     }
 }
