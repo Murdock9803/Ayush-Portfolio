@@ -1,2 +1,2 @@
 # Ayush-Portfolio
-My portfolio as a frontend developer.
+My simple portfolio website as a developer.
