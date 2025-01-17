@@ -26,6 +26,9 @@ nav {
 nav ul {
     display: flex;
     justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 nav ul li {
@@ -453,12 +456,16 @@ nav ul li {
 
 @media (max-width: 500px) {
     nav {
-        height: 7.5vh;
+        height: 15vw;
     }
 
     nav ul li {
-        font-size: 2.8vw;
-        margin: 0 1.2vw;
+        font-size: 3vw;
+        margin: 0 2vw;
+    }
+
+    .site-name, .logo-line {
+        display: none;
     }
 
     .top-left {

@@ -48,6 +48,9 @@
         nav ul {
             display: flex;
             justify-content: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
 
         nav ul li {
@@ -272,6 +275,21 @@
             }
 
         }
+
+        @media (max-width: 500px){
+            nav {
+                height: 15vw;
+            }
+
+            nav ul li {
+                font-size: 3vw;
+                margin: 0 2vw;
+            }
+
+            .site-name, .logo-line {
+                display: none;
+            }
+        }
     </style>
 
 </head>
@@ -283,7 +301,7 @@
             <div class="left">
                 <a target="_blank" href="index.html"><img class="logoimg" src="images/website.png" alt="logo" /></a>
                 <div class="logo-line"></div>
-                <a href="index.html">Ayush's Portfolio</a>
+                <a class="site-name" href="index.html">Ayush's Portfolio</a>
             </div>
             <div class="right">
                 <ul>
