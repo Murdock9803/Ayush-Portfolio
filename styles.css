@@ -321,8 +321,9 @@ nav ul li {
     box-shadow: inset 400px 0 0 0 #a8b3ec;
 }
 
-.skill-item ul li i {
+.skill-item ul li img {
     margin: auto;
+    height: 40px;
 }
 
 
