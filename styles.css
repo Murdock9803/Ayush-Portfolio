@@ -248,20 +248,32 @@ nav ul li {
     height: 70%;
     width: 100%;
     margin: 3% 0 0 0;
-    display: flex;
-    justify-content: space-around;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.skill-box::-webkit-scrollbar{
+    background-color: transparent;
+}
+
+.skill-box::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #393966;;
 }
 
 .skill-item {
     color: #a8b3ec;
-    width: 25%;
+    width: 280px;
     height: 100%;
     padding: 2%;
-    font-size: 1.2rem;
+    font-size: 20px;
+    display: inline-block;
 }
 
 .skill-item ul {
     width: 100%;
+    height: 100%;
 }
 
 .skill-item ul li {
@@ -297,7 +309,6 @@ nav ul li {
 
 .skillName {
     color: #a8b3ec;
-    font-size: 1.35vw;
     width: 70%;
     transition: ease 1s;
     letter-spacing: 2px;
@@ -311,7 +322,6 @@ nav ul li {
 }
 
 .skill-item ul li i {
-    font-size: 2vw;
     margin: auto;
 }
 
@@ -438,10 +448,6 @@ nav ul li {
         width: 80%;
     }
 
-    .skillName {
-        font-size: 2.2vw;
-    }
-
     .bottom {
         height: fit-content;
     }
@@ -537,13 +543,6 @@ nav ul li {
     
     .middle h1 {
         font-size: 4.5vw;
-    }
-    
-    .skill-item ul li i {
-        font-size: 4vw;
-    }
-    .skillName {
-        font-size: 4vw;
     }
 
     .bottom-h1 {
