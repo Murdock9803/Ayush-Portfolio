@@ -292,13 +292,21 @@ nav ul li {
     justify-content: center;
 }
 
+.react {
+    animation-name: rotater;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 0;
+    animation-timing-function: linear;
+}
+
 .skill-item ul li:hover .icondiv {
-        animation-name: rotater;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-        animation-delay: 0;
-        animation-timing-function: linear;
-    }
+    animation-name: rotater;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 0;
+    animation-timing-function: linear;
+}
 
 /*animation icons rotate*/
 @keyframes rotater {
@@ -313,12 +321,6 @@ nav ul li {
     transition: ease 1s;
     letter-spacing: 2px;
     box-shadow: inset 0 0 0 0 #a8b3ec;
-}
-
-.skillName:hover {
-    background-color: white;
-    color: #000;
-    box-shadow: inset 400px 0 0 0 #a8b3ec;
 }
 
 .skill-item ul li img {
