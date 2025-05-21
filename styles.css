@@ -292,7 +292,7 @@ nav ul li {
     justify-content: center;
 }
 
-.react {
+.rotatepermanent {
     animation-name: rotater;
     animation-duration: 3s;
     animation-iteration-count: infinite;
