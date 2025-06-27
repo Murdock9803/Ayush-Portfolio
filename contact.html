@@ -30,19 +30,27 @@
 
         body {
             width: 100%;
-            background-color: rgb(190, 193, 200);
+            height: 100vh;
+            background: black;
+            background-size: cover;
+            background-position: center;
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(5px);
             font-family: 'poppins', sans-serif;
         }
 
         nav {
             position: fixed;
             z-index: 1;
+            top: 20px;
             display: flex;
             justify-content: space-around;
             align-items: center;
-            height: 9vh;
-            width: 100%;
-            background-color: rgb(11, 19, 65);
+            height: 50px;
+            width: 95%;
+            margin: 0 2.5%;
+            border-radius: 25px;
+            background-color: rgba(43, 86, 117, 0.0);
         }
 
         nav ul {
@@ -58,32 +66,6 @@
             margin: 0 20px;
         }
 
-        .left {
-            display: flex;
-            align-items: center;
-        }
-
-        .left img {
-            height: 50px;
-        }
-
-        .logo-line {
-            width: 2px;
-            height: 30px;
-            margin: 0 20px;
-            background-color: rgb(177, 171, 231);
-        }
-
-        .left a {
-            color: rgb(98, 96, 150);
-            text-decoration: none;
-            font-size: 1.4rem;
-        }
-
-        .left a:hover {
-            color: #4c4c7c;
-        }
-
         .right ul li a {
             text-decoration: none;
             color: rgb(98, 96, 150);
@@ -97,121 +79,35 @@
         .center {
             width: 100%;
             height: 100vh;
-            background-color: #333359;
+            padding: 20px;
+            color: rgb(82, 87, 106);
             display: flex;
-        }
-
-        .first {
-            height: 100%;
-            width: 50%;
-            background-color: rgb(149, 149, 159);
-            padding: 20vh 7vw;
-        }
-
-        .first h1 {
-            font-size: 2.4vw;
-            margin-bottom: 8vh;
-        }
-
-        .first ul li {
-            font-size: 1.8vw;
-            list-style: none;
-            color: #281a1a;
-            font-family: 'Borel', cursive;
-        }
-
-        .first ul li span {
-            font-family: monospace;
-            color: #120254;
-        }
-
-        .second {
-            height: 100%;
-            width: 50%;
-            padding: 20vh 6vw;
-            background-color: #050529;
-        }
-
-
-        form {
-            width: 90%;
-            max-width: 600px;
-        }
-
-        .input-group {
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .input-group input {
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 5px;
-            outline: 0;
-            border: 1px solid #595499;
-            border-width: 2px;
-            border-radius: 5px;
-            color: #acb5ff;
-            background: transparent;
-            font-size: 15px;
-        }
-
-        .row div {
-            width: 45%;
-        }
-
-        label {
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            padding: 10px;
-            color: #dadbed;
-            cursor: text;
-            transition: 0.2s;
-            font-size: 12px;
-        }
-
-        button {
-            padding: 10px 0;
-            color: #dad8f0;
-            outline: none;
-            background: transparent;
-            border: 2px solid #595499;
-            border-radius: 6px;
-            width: 30%;
-            cursor: pointer;
-            font-size: 15px;
-        }
-
-        button:hover {
-            background-color: rgb(31, 30, 62);
-            color: #4c4c7c;
-        }
-
-        input:focus~label,
-        input:valid~label,
-        textarea:focus~label,
-        textarea:valid~label {
-            top: -35px;
-            font: 10px;
-        }
-
-        .row {
-            display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-family: monospace;
         }
 
-        .row .input-group {
-            flex-basis: 48%;
+        .centerheading {
+            margin-bottom: 20px;
         }
 
+        .center span {
+            color: rgb(111, 139, 224);
+        }
+        
+        .center ul {
+            list-style: none;
+        }
+        .center ul li {
+            margin-top: 4px;
+        }
 
+        .center a {
+            color: rgb(111, 139, 224);
+            text-decoration: none;
+        }
 
 
         /* RESPONSIVENESS */
@@ -223,52 +119,10 @@
                 height: 50px;
             }
 
-            .left a {
-                font-size: 3vw;
-            }
-
-            .left img {
-                height: 7vw;
-            }
-
             nav ul li {
                 margin: 0 2vw;
                 font-size: 2vw;
             }
-
-            .logo-line {
-                margin: 0 10px;
-                height: 25px;
-            }
-
-            .center {
-                flex-direction: column;
-            }
-
-            .first {
-                width: 100%;
-                height: fit-content;
-                padding: 10vh 6vw;
-            }
-
-            .first h1 {
-                font-size: 4vw;
-            }
-
-            .second {
-                width: 100%;
-                height: 2000vh;
-                padding: 10vh 6vw;
-            }
-
-            .first ul li {
-                font-size: 5vw;
-            }
-
-            label {
-                font-size: 3vw;
-            }
-
         }
 
         @media (max-width: 500px){
@@ -280,10 +134,6 @@
                 font-size: 3vw;
                 margin: 0 2vw;
             }
-
-            .site-name, .logo-line {
-                display: none;
-            }
         }
     </style>
 
@@ -293,12 +143,6 @@
 <body>
     <header>
         <nav>
-            <div class="left">
-                <a target="_blank" href="index.html"><img class="logoimg" src="images/website.png"
-                        alt="logo" /></a>
-                <div class="logo-line"></div>
-                <a class="site-name" href="index.html"><strong>Ayush's Portfolio</strong></a>
-            </div>
             <div class="right">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
@@ -311,45 +155,17 @@
     </header>
 
     <div class="center">
-        <div class="first">
-            <tt>
-                <h1>Send me a message here ...</h1>
-            </tt>
-
+        <p class="centerheading">Want to discuss <span>our next project</span> together ?</p>
+        <p class="centerheading">Let's build something <span>amazing.</span></p>
+        <p>
             <ul>
-                <li>Name : <span>Ayush Sahu</span></li>
-                <li>Email : <span>ayushsahu9803@gmail.com</span></li>
-                <li>Institute : <span>IIT(BHU), Varanasi</span></li>
-                <li>Works as : <span>Software Developer</span></li>
-                <li>HomeTown : <span>Bhopal, India</span></li>
+                <li>> mail: ayushsahu9803@gmail.com</li>
+                <li>> linkedin: <a target="_blank" href="https://www.linkedin.com/in/ayush-sahu-25b329230/" rel="noopener">@ayush-sahu-25b329230</a></li>
+                <li>> github: <a target="_blank" href="https://github.com/Murdock9803" rel="noopener">@Murdock9803</a></li>
+                <li>> x (twitter): <a target="_blank" href="https://x.com/Murdock9803" rel="noopener">@Murdock9803</a></li>
+                <li>> discord: @ayushs_9803</li>
             </ul>
-        </div>
-        <div class="second">
-            <form action="mailto:ayushsahu9803@gmail.com">
-
-                <div class="row">
-                    <div class="input-group">
-                        <input type="text" id="name" required>
-                        <label for="name">Your Name</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="number" required>
-                        <label for="number">Contact No.</label>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <input type="email" id="email" required>
-                    <label for="email">Email Id</label>
-                </div>
-                <div class="input-group">
-                    <textarea id="message" rows="8" required></textarea>
-                    <label for="message">Your Message</label>
-                </div>
-                <button type="submit">Submit</button>
-
-            </form>
-        </div>
+        </p>
     </div>
 
 
