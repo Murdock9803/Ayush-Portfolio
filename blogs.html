@@ -284,33 +284,32 @@
             margin-top: 3.5vh;
         }
 
-
-
-
-
         /* RESPONSIVENESS */
 
-        @media (max-width : 700px) {
-
-
-            .left a {
-                font-size: 3vw;
+        @media (max-width : 750px) {
+            nav {
+                padding: 0 3vw;
+                height: 8vh;
             }
 
-            .left img {
+            .left a.site-name {
+                font-size: 3.1vw;
+            }
+
+            .left img.logoimg {
                 height: 7vw;
             }
 
             nav ul li {
-                margin: 0 2vw;
+                margin: 0;
                 font-size: 2vw;
             }
 
             .logo-line {
                 margin: 0 10px;
                 height: 25px;
+                opacity: 0.9;
             }
-
 
             .page {
                 height: fit-content;
@@ -348,15 +347,37 @@
         @media (max-width: 500px){
             nav {
                 height: 15vw;
-            }
-
-            nav ul li {
-                font-size: 3vw;
-                margin: 0 2vw;
+                padding: 0 4vw;
+                align-items: center;
             }
 
             .site-name, .logo-line {
                 display: none;
+            }
+
+            .left img.logoimg {
+                height: 7.5vw;
+            }
+
+            nav ul {
+                gap: 0.4rem;
+            }
+
+            nav ul li a {
+                padding: 0.6rem 0.8rem;
+                font-size: 3vw;
+                border-radius: 12px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            nav {
+                padding: 0 2.5vw;
+            
+            }
+            nav ul li a {
+                padding: 0.5rem 0.7rem;
+                font-size: 3.5vw;
             }
         }
     </style>
