@@ -13,63 +13,148 @@ body {
 }
 
 nav {
-    position: fixed;
-    z-index: 1;
-    display: flex;
-    justify-content: space-around;
-    align-items:center ;
-    height: 9vh;
-    width: 100%;
-    background-color: rgb(14, 14, 55);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9vh;
+  padding: 0 3.5rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.03) 0%,
+    rgba(255,255,255,0.02) 100%
+  );
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  backdrop-filter: blur(10px) saturate(120%);
+  box-shadow:
+    0 6px 20px rgba(8,10,30,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.02);
+  color: #ffffff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 600;
-    letter-spacing: 1px;
+/* moving soft gradient underlay (liquid feel) */
+nav::before{
+  content: "";
+  position: absolute;
+  inset: -30% -20% -30% -20%;
+  background: radial-gradient(600px 200px at 10% 30%, rgba(157,159,255,0.10), transparent 12%),
+              radial-gradient(400px 150px at 80% 70%, rgba(120,220,255,0.06), transparent 10%);
+  filter: blur(30px);
+  transform: translateX(-10%);
+  animation: navLiquid 10s linear infinite;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.9;
 }
 
-nav ul li {
-    list-style: none;
-    margin: 0 20px;
+nav .left, nav .right {
+  position: relative; /* keep above pseudo layers */
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  z-index: 2;
 }
 
-.left {
-    display: flex;
-    align-items: center;
+.left img.logoimg {
+  height: 50px;
+  width: auto;
+  display: block;
+  -webkit-user-select: none;
+  user-select: none;
+  border-radius: 8px;
+  padding: 4px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  box-shadow: 0 6px 18px rgba(6,7,20,0.6);
+  transition: transform 220ms ease, box-shadow 220ms ease;
 }
-
-.left img {
-    height: 50px;
+.left img.logoimg:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 28px rgba(22,24,70,0.6);
 }
 
 .logo-line {
-    width: 2px;
-    height: 30px;
-    margin: 0 20px;
-    background-color: rgb(177, 171, 231);
+  width: 2px;
+  height: 30px;
+  margin: 0 15px;
+  background: linear-gradient(180deg, rgba(157,159,255,0.8), rgba(177,171,231,0.6));
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(157,159,255,0.06);
+  border-radius: 2px;
 }
 
-.left a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 1.4rem;
+.site-name {
+  color: transparent;
+  background-image: linear-gradient(90deg, #fe7f7f, #8585ff 40%, #e3ff90 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 2;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+.site-name:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+  color: #9d9fff;
 }
 
-.left a:hover {
-    color: #9d9fff;
+nav ul {
+  display: flex;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  list-style: none;
+  z-index: 2;
 }
 
-.right ul li a {
-    text-decoration: none;
-    color: #fff;
+nav ul li {
+  list-style: none;
+  margin: 0 20px;
+  position: relative;
+  z-index: 2;
 }
 
-.right ul li a:hover {
-    color: #9d9fff;
-    font-weight: bolder;
+nav ul li a {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #9d9fff;
+  outline: none;
+}
+
+@keyframes navLiquid {
+  0% { transform: translateX(-10%) scale(1); }
+  50% { transform: translateX(6%) scale(1.03); }
+  100% { transform: translateX(-10%) scale(1); }
+}
+
+@keyframes shimmer {
+  0% { transform: rotate(12deg) translateX(-10%); opacity: 0.08; }
+  50% { transform: rotate(12deg) translateX(10%); opacity: 0.12; }
+  100% { transform: rotate(12deg) translateX(-10%); opacity: 0.08; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav::before, nav::after { animation: none; transition: none; }
+  nav ul li a, .left img.logoimg { transition: none; }
 }
 
 .top {
