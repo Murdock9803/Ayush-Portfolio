@@ -171,6 +171,27 @@ nav ul li a:focus {
     width: 40%;
     font-size: 3vw;
     padding: 0 3vw;
+    position: relative;
+}
+
+.top-left .star {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 4vw;
+    transform: rotate(15deg);
+    color: transparent;
+    background-image: linear-gradient(90deg, #cb5555, #5a5ab2 50%, #cbee61 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.my-image:hover .star {
+    animation-name: rotater;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 0;
+    animation-timing-function: linear;
 }
 
 .my-image{
