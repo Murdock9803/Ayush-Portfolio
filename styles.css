@@ -174,38 +174,40 @@ nav ul li a:focus {
     position: relative;
 }
 
-.top-left .star {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 4vw;
-    transform: rotate(15deg);
-    color: transparent;
-    background-image: linear-gradient(90deg, #cb5555, #5a5ab2 50%, #cbee61 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
-.my-image:hover .star {
-    animation-name: rotater;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-delay: 0;
-    animation-timing-function: linear;
-}
-
 .my-image{
-    width: 15vw;
+    width: fit-content;
     height: 15vw;
-    margin: 5vh 30%;
+    margin: 5vh auto;
     overflow: hidden;
     border-radius: 50%;
     border: 1px solid rgb(55, 39, 97);
 }
 
+.top-left .star {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+    padding: 3px 8px;
+    border-radius: 50px;
+    border: 1px dashed rgb(182, 179, 250);
+    color: rgb(182, 179, 250);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    width: 30px;
+    height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+.my-image:hover .star {
+    width: 108px;
+}
+
 
 .my-image img {
-    width: 100%;
+    height: 100%;
     transition: all ease 1s;
 }
 
