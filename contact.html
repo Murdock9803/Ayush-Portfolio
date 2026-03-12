@@ -193,6 +193,9 @@
             justify-content: center;
             font-size: 16px;
             font-family: monospace;
+            overflow: hidden;
+            position: relative;
+            background-color: transparent;
         }
 
         .centerheading {
@@ -282,6 +285,111 @@
                 font-size: 3.5vw;
             }
         }
+
+        /* Experience Blobs effect */
+        .blob1 {
+            background-color: rgba(106, 116, 255, 0.8);
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            border-radius: 50%;
+            transform: rotate(25deg);
+            animation: blobsizer 15s ease-in-out infinite;
+            box-shadow: 20px -30px 35px rgba(106, 116, 255, 0.8);
+            filter: blur(30px);
+        }
+
+        .blob2 {
+            background-color: rgba(255, 224, 111, 0.8);
+            position: absolute;
+            bottom: -20%;
+            left: 10%;
+            border-radius: 50%;
+            transform: rotate(20deg);
+            animation: blobsizer 10s ease-in-out infinite;
+            box-shadow: -30px 20px 35px rgba(255, 224, 111, 0.8);
+            filter: blur(30px);
+        }
+
+        .blob3 {
+            background-color: rgba(255, 76, 118, 0.8);
+            position: absolute;
+            bottom: -10%;
+            left: 30%;
+            border-radius: 50%;
+            transform: rotate(180deg);
+            animation: blobsizer 5s ease-in-out infinite;
+            box-shadow: -30px 20px 35px rgba(255, 76, 118, 0.8);
+            filter: blur(30px);
+        }
+
+        .blob4 {
+            background-color: rgba(255, 224, 111, 0.8);
+            position: absolute;
+            bottom: -20%;
+            left: 50%;
+            border-radius: 50%;
+            transform: rotate(15deg);
+            animation: blobsizer 10s ease-in-out infinite;
+            box-shadow: -20px -30px 35px rgba(255, 224, 111, 0.8);
+            filter: blur(30px);
+        }
+
+        .blob5 {
+            background-color: rgba(255, 76, 118, 0.8);
+            position: absolute;
+            bottom: -20%;
+            left: 65%;
+            border-radius: 50%;
+            transform: rotate(0deg);
+            animation: blobsizer 5s ease-in-out infinite;
+            box-shadow: -20px 30px 35px rgba(255, 76, 118, 0.8);
+            filter: blur(30px);
+        }
+
+        .blob6 {
+            background-color: rgba(126, 243, 254, 0.8);
+            position: absolute;
+            bottom: -20%;
+            left: 80%;
+            border-radius: 50%;
+            transform: rotate(140deg);
+            animation: blobsizer 10s ease-in-out infinite;
+            box-shadow: -30px 20px 35px rgba(126, 243, 254, 0.8);
+            filter: blur(30px);
+        }
+
+        @keyframes blobsizer {
+            0% {
+                height: 24%;
+                width: 40%;
+            }
+            40% {
+                height: 14%;
+                width: 50%;
+            }
+            70% {
+                height: 19%;
+                width: 30%;
+            }
+            100% {
+                height: 24%;
+                width: 40%;
+            }
+        }
+
+        .blob-landing {
+            bottom: -27%;
+        }
+
+        .blob-base {
+            position: absolute;
+            width: 100%;
+            height: 17px;
+            background: linear-gradient(#949fd9c8, #6f89d1cb);;
+            bottom: -10px;
+            filter: blur(10px);
+        }
     </style>
 
 
@@ -318,6 +426,14 @@
                 <li>> discord: @ayushs_9803</li>
             </ul>
         </p>
+
+        <div class="blob-landing blob1"></div>
+        <div class="blob-landing blob2"></div>
+        <div class="blob-landing blob3"></div>
+        <div class="blob-landing blob4"></div>
+        <div class="blob-landing blob5"></div>
+        <div class="blob-landing blob6"></div>
+        <div class="blob-base"></div>
     </div>
 
 
