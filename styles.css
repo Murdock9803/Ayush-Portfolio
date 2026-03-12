@@ -393,6 +393,7 @@ nav ul li a:focus {
     overflow: hidden;
     position: relative;
     display: flex;
+    background-color: transparent;
 }
 
 .experience .right-item {
@@ -406,6 +407,7 @@ nav ul li a:focus {
     display: flex;
     overflow: hidden;
     transition: all ease 1s;
+    background-color: transparent;
 }
 
 .experience a {
@@ -452,7 +454,6 @@ nav ul li a:focus {
     font-size: 1.1vmax;
     font-family: 'Courier New', Courier, monospace;
 }
-
 
 /* Skillset Section */
 
@@ -819,4 +820,108 @@ nav ul li a:focus {
         padding: 0.5rem 0.7rem;
         font-size: 3.5vw;
     }
+}
+
+
+
+
+/* Experience Blobs effect */
+.blob1 {
+    background-color: rgba(106, 116, 255, 0.8);
+    position: absolute;
+    bottom: -20%;
+    left: -10%;
+    border-radius: 50%;
+    transform: rotate(25deg);
+    animation: blobsizer 15s ease-in-out infinite;
+    box-shadow: 20px -30px 35px rgba(106, 116, 255, 0.8);
+    filter: blur(10px);
+}
+
+.blob2 {
+    background-color: rgba(255, 224, 111, 0.8);
+    position: absolute;
+    bottom: -20%;
+    left: 10%;
+    border-radius: 50%;
+    transform: rotate(20deg);
+    animation: blobsizer 10s ease-in-out infinite;
+    box-shadow: -30px 20px 35px rgba(255, 224, 111, 0.8);
+    filter: blur(10px);
+}
+
+.blob3 {
+    background-color: rgba(255, 76, 118, 0.8);
+    position: absolute;
+    bottom: -17%;
+    left: 30%;
+    border-radius: 50%;
+    transform: rotate(180deg);
+    animation: blobsizer 5s ease-in-out infinite;
+    box-shadow: -30px 20px 35px rgba(255, 76, 118, 0.8);
+    filter: blur(10px);
+}
+
+.blob4 {
+    background-color: rgba(255, 224, 111, 0.8);
+    position: absolute;
+    bottom: -25%;
+    left: 50%;
+    border-radius: 50%;
+    transform: rotate(15deg);
+    animation: blobsizer 10s ease-in-out infinite;
+    box-shadow: -20px -30px 35px rgba(255, 224, 111, 0.8);
+    filter: blur(10px);
+}
+
+.blob5 {
+    background-color: rgba(255, 76, 118, 0.8);
+    position: absolute;
+    bottom: -20%;
+    left: 65%;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    animation: blobsizer 5s ease-in-out infinite;
+    box-shadow: -20px 30px 35px rgba(255, 76, 118, 0.8);
+    filter: blur(10px);
+}
+
+.blob6 {
+    background-color: rgba(126, 243, 254, 0.8);
+    position: absolute;
+    bottom: -20%;
+    left: 80%;
+    border-radius: 50%;
+    transform: rotate(140deg);
+    animation: blobsizer 15s ease-in-out infinite;
+    box-shadow: -30px 20px 35px rgba(126, 243, 254, 0.8);
+    filter: blur(10px);
+}
+
+@keyframes blobsizer {
+    0% {
+        height: 30%;
+        width: 40%;
+    }
+    40% {
+        height: 15%;
+        width: 50%;
+    }
+    70% {
+        height: 25%;
+        width: 30%;
+    }
+    100% {
+        height: 30%;
+        width: 40%;
+    }
+}
+
+.blob-base {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(#949fd9c8, #6f89d1cb);;
+    bottom: -10px;
+    filter: blur(10px);
 }
