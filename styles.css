@@ -917,10 +917,14 @@ nav ul li a:focus {
     }
 }
 
+.blob-landing {
+    bottom: -27%;
+}
+
 .blob-base {
     position: absolute;
     width: 100%;
-    height: 20px;
+    height: 17px;
     background: linear-gradient(#949fd9c8, #6f89d1cb);;
     bottom: -10px;
     filter: blur(10px);
