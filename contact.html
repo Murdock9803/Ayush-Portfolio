@@ -182,20 +182,46 @@
             nav ul li a, .left img.logoimg { transition: none; }
         }
 
-        .center {
-            width: 100%;
+        .center-box {
             height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider {
+            height: 30vh;
+            width: 160%;
+            position: absolute;
+            left: -30%;
+            background: linear-gradient(rgb(199, 201, 96), rgb(84, 84, 255));
+            animation: rotateSlider 12s infinite;
+            animation-delay: 0;
+            animation-timing-function: linear;
+        }
+        @keyframes rotateSlider {
+            0% { transform: rotate(0); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .center {
+            width: calc(100% - 3px);
+            height: calc(100% - 3px);
             padding: 20px;
-            color: rgb(82, 87, 106);
+            color: rgb(114, 119, 137);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
+            font-size: 18px;
             font-family: monospace;
             overflow: hidden;
             position: relative;
-            background-color: transparent;
+            background-color: rgb(0, 0, 0);
         }
 
         .centerheading {
@@ -287,113 +313,7 @@
         }
 
         /* Bottom Animation */
-        :root {
-            --col: #43457476;
-        }
-
-        .blob1 {
-            background-color: var(--col);
-            position: absolute;
-            bottom: -20%;
-            left: -10%;
-            border-radius: 50%;
-            transform: rotate(25deg);
-            animation: blobsizer 15s ease-in-out infinite;
-            box-shadow: 20px -30px 35px var(--col);
-            filter: blur(10px);
-        }
-
-        .blob2 {
-            background-color: var(--col);
-            position: absolute;
-            bottom: -20%;
-            left: 10%;
-            border-radius: 50%;
-            transform: rotate(20deg);
-            animation: blobsizer 10s ease-in-out infinite;
-            box-shadow: -30px 20px 35px var(--col);
-            filter: blur(10px);
-        }
-
-        .blob3 {
-            background-color: var(--col);
-            position: absolute;
-            bottom: -17%;
-            left: 30%;
-            border-radius: 50%;
-            transform: rotate(180deg);
-            animation: blobsizer 5s ease-in-out infinite;
-            box-shadow: -30px 20px 35px var(--col);
-            filter: blur(10px);
-        }
-
-        .blob4 {
-            background-color: var(--col);
-            position: absolute;
-            bottom: -20%;
-            left: 50%;
-            border-radius: 50%;
-            transform: rotate(15deg);
-            animation: blobsizer 10s ease-in-out infinite;
-            box-shadow: -20px -30px 35px var(--col);
-            filter: blur(10px);
-        }
-
-        .blob5 {
-            background-color: var(--col);
-            position: absolute;
-            bottom: -18%;
-            left: 65%;
-            border-radius: 50%;
-            transform: rotate(0deg);
-            animation: blobsizer 5s ease-in-out infinite;
-            box-shadow: -20px 30px 35px var(--col);
-            filter: blur(10px);
-        }
-
-        .blob6 {
-            background-color: var(--col);
-            position: absolute;
-            bottom: -15%;
-            left: 80%;
-            border-radius: 50%;
-            transform: rotate(140deg);
-            animation: blobsizer 15s ease-in-out infinite;
-            box-shadow: -30px 20px 35px var(--col);
-            filter: blur(10px);
-        }
-
-        @keyframes blobsizer {
-            0% {
-                height: 24%;
-                width: 40%;
-            }
-            40% {
-                height: 14%;
-                width: 50%;
-            }
-            70% {
-                height: 19%;
-                width: 30%;
-            }
-            100% {
-                height: 24%;
-                width: 40%;
-            }
-        }
-
-        .blob-landing {
-            bottom: -27%;
-        }
-
-        .blob-base {
-            position: absolute;
-            width: 100%;
-            height: 10px;
-            background: linear-gradient(#949fd9c8, #6f89d1cb);;
-            bottom: -10px;
-            filter: blur(10px);
-        }
+        
     </style>
 
 
@@ -418,26 +338,21 @@
       </nav>
     </header>
 
-    <div class="center">
-        <p class="centerheading">Want to discuss <span>our next project</span> together ?</p>
-        <p class="centerheading">Let's build something <span>amazing.</span></p>
-        <p>
-            <ul>
-                <li>> mail: ayushsahu9803@gmail.com</li>
-                <li>> linkedin: <a target="_blank" href="https://www.linkedin.com/in/ayush-sahu-25b329230/" rel="noopener">@ayush-sahu-25b329230</a></li>
-                <li>> github: <a target="_blank" href="https://github.com/Murdock9803" rel="noopener">@Murdock9803</a></li>
-                <li>> x (twitter): <a target="_blank" href="https://x.com/Murdock9803" rel="noopener">@Murdock9803</a></li>
-                <li>> discord: @ayushs_9803</li>
-            </ul>
-        </p>
-
-        <div class="blob-landing blob1"></div>
-        <div class="blob-landing blob2"></div>
-        <div class="blob-landing blob3"></div>
-        <div class="blob-landing blob4"></div>
-        <div class="blob-landing blob5"></div>
-        <div class="blob-landing blob6"></div>
-        <div class="blob-base"></div>
+    <div class="center-box">
+        <div class="slider"></div>
+        <div class="center">
+            <p class="centerheading">Want to discuss <span>our next project</span> together ?</p>
+            <p class="centerheading">Let's build something <span>amazing.</span></p>
+            <p>
+                <ul>
+                    <li>> mail: ayushsahu9803@gmail.com</li>
+                    <li>> linkedin: <a target="_blank" href="https://www.linkedin.com/in/ayush-sahu-25b329230/" rel="noopener">@ayush-sahu-25b329230</a></li>
+                    <li>> github: <a target="_blank" href="https://github.com/Murdock9803" rel="noopener">@Murdock9803</a></li>
+                    <li>> x (twitter): <a target="_blank" href="https://x.com/Murdock9803" rel="noopener">@Murdock9803</a></li>
+                    <li>> discord: @ayushs_9803</li>
+                </ul>
+            </p>
+        </div>
     </div>
 
 
